@@ -1,0 +1,12 @@
+COLEGIO ECOLÓGICO SCOUT — SITIO WEB
+
+Cómo abrir:
+1. Descomprime el archivo ZIP.
+2. Abre la carpeta colegio_ecologico_scout_web.
+3. Haz doble clic en index.html para abrir la página en el navegador.
+
+La página está construida con HTML, CSS y JavaScript, sin dependencias externas.
+El logo se encuentra en assets/logo-colegio.png.
+Incluye buscador y filtros de oraciones, botones para copiar e imprimir, menú adaptable a móviles y secciones sobre fundamentos, ramas, Promesa Scout, investidura y ficha REME.
+
+Puedes editar index.html con cualquier editor de texto o código.

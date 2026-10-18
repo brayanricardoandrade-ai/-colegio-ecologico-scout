@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#075b53">
+<title>Colegio Ecológico Scout | Oraciones y fundamentos</title>
+<style>
+:root{
+ --forest:#075b53;--forest2:#0b7466;--leaf:#72a942;--sky:#e8f5f2;
+ --gold:#f4c65e;--ink:#18312e;--muted:#5b716c;--paper:#fffdf7;
+ --line:#d9e8e1;--shadow:0 18px 50px rgba(6,55,48,.12);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:88px}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.65}
+a{color:inherit}
+button{font:inherit}
+.topbar{position:sticky;top:0;z-index:20;background:rgba(255,253,247,.94);backdrop-filter:blur(14px);border-bottom:1px solid rgba(7,91,83,.12)}
+.nav{max-width:1180px;margin:auto;padding:12px 22px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none;font-weight:850;letter-spacing:-.03em;color:var(--forest)}
+.brand img{width:46px;height:46px;object-fit:contain;border-radius:50%}
+.brand span{line-height:1.1}.brand small{display:block;font-size:.68rem;letter-spacing:.12em;color:var(--muted);font-weight:750;margin-top:4px}
+.navlinks{display:flex;align-items:center;gap:19px;flex-wrap:wrap}
+.navlinks a{text-decoration:none;color:#35534d;font-weight:700;font-size:.88rem}
+.navlinks a:hover{color:var(--forest2)}
+.menu-btn{display:none;border:1px solid var(--line);background:white;border-radius:12px;padding:8px 12px;color:var(--forest);font-weight:800}
+.hero{position:relative;isolation:isolate;overflow:hidden;background:linear-gradient(130deg,#063f3a 0%,#086b5e 53%,#318354 100%);color:white;border-radius:0 0 42px 42px}
+.hero:before{content:"";position:absolute;z-index:-1;width:600px;height:600px;right:-170px;top:-280px;border-radius:50%;background:radial-gradient(circle,rgba(255,221,119,.22),rgba(255,221,119,0) 68%)}
+.hero:after{content:"";position:absolute;z-index:-1;left:-100px;bottom:-220px;width:440px;height:440px;border-radius:50%;background:radial-gradient(circle,rgba(118,207,156,.2),transparent 70%)}
+.hero-landscape{position:absolute;inset:auto 0 0;height:125px;z-index:-1;opacity:.23;pointer-events:none;background:linear-gradient(transparent,rgba(2,42,36,.55))}
+.hero-landscape:before,.hero-landscape:after{content:"";position:absolute;bottom:0;width:0;height:0;border-left:90px solid transparent;border-right:90px solid transparent;border-bottom:145px solid #022f2b}
+.hero-landscape:before{left:5%}.hero-landscape:after{right:10%;border-left-width:120px;border-right-width:120px;border-bottom-width:185px}
+.hero-inner{max-width:1280px;margin:auto;padding:78px 42px 90px;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:48px;position:relative;z-index:1}
+.hero-copy{position:relative}
+
+.eyebrow{display:inline-flex;align-items:center;gap:9px;border:1px solid rgba(255,255,255,.32);background:rgba(255,255,255,.13);box-shadow:0 7px 20px rgba(0,0,0,.08);border-radius:999px;padding:9px 15px;font-size:.76rem;font-weight:900;letter-spacing:.1em;text-transform:uppercase}
+.eyebrow i{width:9px;height:9px;background:#ffcf58;border-radius:50%;display:inline-block;box-shadow:0 0 0 5px rgba(255,207,88,.15)}
+h1{font-size:clamp(2.8rem,5.5vw,5.15rem);line-height:.99;letter-spacing:-.065em;margin:24px 0 20px;max-width:740px;text-wrap:balance}
+h1 .highlight{color:#ffdc75;display:inline-block;position:relative}
+h1 .highlight:after{content:"";position:absolute;height:8px;left:2px;right:4px;bottom:-5px;background:#ffdc75;border-radius:99px;transform:rotate(-1.5deg);opacity:.85}
+.hero-label{display:block;color:#bde8d3;font-size:.82rem;letter-spacing:.18em;text-transform:uppercase;font-weight:900;margin:0 0 8px}
+.hero-note{display:flex;align-items:center;gap:10px;color:#e2f5ec;font-size:.91rem;font-weight:750;margin-top:23px}
+.hero-note:before{content:"";width:32px;height:2px;background:#ffdc75;border-radius:9px}
+.hero p{font-size:1.1rem;color:#e2f5ec;max-width:600px;margin:0 0 28px;line-height:1.8}
+.hero-actions{display:flex;gap:13px;flex-wrap:wrap}
+.btn{border:0;border-radius:16px;padding:14px 20px;font-weight:900;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:9px;cursor:pointer;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 12px 24px rgba(0,0,0,.16)}
+.btn-gold{background:linear-gradient(135deg,#ffe17b,#ffc84d);color:#23433a;box-shadow:0 9px 24px rgba(0,0,0,.13)}
+.btn-light{background:rgba(255,255,255,.12);color:white;border:1px solid rgba(255,255,255,.4);backdrop-filter:blur(8px)}
+.hero-art{position:relative;min-height:420px;display:grid;place-items:center}
+.hero-orbit{position:absolute;width:390px;height:390px;border:1px solid rgba(255,255,255,.16);border-radius:50%;top:50%;left:50%;transform:translate(-50%,-50%)}
+.hero-orbit:before,.hero-orbit:after{content:"";position:absolute;border:1px dashed rgba(255,255,255,.22);border-radius:50%;inset:24px}
+.hero-orbit:after{inset:52px}
+.logo-card{position:relative;background:linear-gradient(145deg,#fff,#f7fff8);border:6px solid rgba(255,255,255,.55);border-radius:34px;padding:20px;box-shadow:0 24px 55px rgba(0,35,27,.22);transform:none;width:min(82%,350px);justify-self:center;z-index:2}
+.logo-card:before{content:"";position:absolute;inset:-12px;border:2px dashed rgba(255,255,255,.45);border-radius:42px;pointer-events:none}
+.logo-card img{display:block;width:100%;height:auto;border-radius:20px}
+.logo-caption{text-align:center;color:#17645a;font-weight:950;letter-spacing:.11em;font-size:.69rem;margin:11px 0 0}
+
+
+
+@keyframes floaty{0%,100%{translate:0 0}50%{translate:0 -10px}}
+.quickbar{max-width:1180px;margin:-27px auto 0;padding:0 22px;position:relative;z-index:2}
+.quick-grid{display:grid;grid-template-columns:repeat(4,1fr);background:white;border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow);overflow:hidden}
+.quick{padding:19px 20px;text-decoration:none;border-right:1px solid var(--line);display:flex;gap:12px;align-items:center}
+.quick:last-child{border:0}.quick:hover{background:#f0f8f3}
+.quick-icon{width:42px;height:42px;border-radius:14px;background:#e7f4e6;display:grid;place-items:center;font-size:1.3rem;flex-shrink:0}
+.quick b{display:block;color:var(--forest);font-size:.96rem}.quick small{display:block;color:var(--muted);font-size:.78rem}
+section{max-width:1180px;margin:auto;padding:86px 22px}
+.section-head{max-width:720px;margin-bottom:32px}
+.kicker{color:var(--forest2);font-size:.78rem;letter-spacing:.15em;text-transform:uppercase;font-weight:900}
+h2{font-size:clamp(2rem,4vw,3.25rem);line-height:1.08;letter-spacing:-.045em;margin:10px 0 14px;color:var(--forest)}
+.section-head p{color:var(--muted);font-size:1.05rem;margin:0}
+.prayer-tools{display:flex;gap:12px;flex-wrap:wrap;margin:25px 0 28px}
+.search{flex:1;min-width:220px;border:1px solid var(--line);border-radius:14px;padding:13px 16px;background:white;font:inherit;outline:none}
+.search:focus{border-color:var(--forest2);box-shadow:0 0 0 3px rgba(11,116,102,.12)}
+.filter{border:1px solid var(--line);background:white;color:var(--forest);border-radius:14px;padding:12px 15px;font-weight:800;cursor:pointer}
+.filter.active,.filter:hover{background:var(--forest);color:white}
+.prayer-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.prayer-card{background:white;border:1px solid var(--line);border-radius:24px;padding:26px;box-shadow:0 8px 24px rgba(12,70,60,.05);position:relative;overflow:hidden;display:flex;flex-direction:column}
+.prayer-card:before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--leaf)}
+.prayer-card.featured{grid-column:1/-1;background:linear-gradient(135deg,#f0f8ee,#fffdf7);border-color:#c8dfc8}
+.card-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.prayer-tag{font-size:.72rem;text-transform:uppercase;letter-spacing:.12em;font-weight:900;color:var(--forest2)}
+.prayer-card h3{font-size:1.45rem;color:var(--forest);margin:7px 0 15px;letter-spacing:-.025em}
+.prayer-text{white-space:pre-line;font-family:Georgia,"Times New Roman",serif;font-size:1.13rem;line-height:1.9;color:#263d37;margin:0;flex:1}
+.prayer-card.featured .prayer-text{font-size:clamp(1.2rem,2vw,1.5rem);max-width:800px}
+.card-actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:22px}
+.mini-btn{border:1px solid var(--line);background:#fff;border-radius:999px;padding:9px 13px;font-size:.82rem;font-weight:800;color:var(--forest);cursor:pointer}
+.mini-btn:hover{background:var(--forest);color:#fff}
+.empty{display:none;padding:24px;background:#fff;border:1px dashed var(--line);border-radius:18px;color:var(--muted)}
+.band{background:#edf6ef;border-top:1px solid #e1eee4;border-bottom:1px solid #e1eee4}
+.band section{padding-top:74px;padding-bottom:74px}
+.foundation-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.info-card{background:white;border:1px solid #dcebe0;border-radius:22px;padding:24px}
+.info-card .symbol{font-size:1.7rem}.info-card h3{color:var(--forest);margin:10px 0 7px;font-size:1.15rem}.info-card p{margin:0;color:var(--muted)}
+.timeline{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:24px}
+.timeline article{border-left:3px solid var(--gold);padding:5px 0 5px 17px}
+.timeline strong{display:block;color:var(--forest);font-size:1.05rem;margin-bottom:5px}
+.timeline p{margin:0;color:var(--muted);font-size:.94rem}
+.branch-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.branch{border-radius:20px;padding:22px;background:white;border:1px solid var(--line)}
+.branch:nth-child(odd){background:#f2f8ef}
+.branch span{font-size:1.5rem}.branch h3{margin:8px 0 5px;color:var(--forest)}.branch p{margin:0;color:var(--muted);font-size:.9rem}
+.promise{background:var(--forest);color:white;border-radius:28px;padding:34px;display:grid;grid-template-columns:.75fr 1.25fr;gap:28px;align-items:center}
+.promise h3{font-size:2rem;line-height:1.1;margin:0 0 10px}.promise p{color:#d8eee5;margin:0}
+.promise blockquote{font-family:Georgia,serif;font-size:1.22rem;line-height:1.8;margin:0;padding-left:24px;border-left:3px solid var(--gold);white-space:pre-line}
+.footer{background:#073e39;color:#d8eee5;padding:38px 22px}
+.footer-inner{max-width:1180px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.footer-brand{display:flex;align-items:center;gap:13px}.footer-brand img{width:55px;height:55px;object-fit:contain;background:#fff;border-radius:50%;padding:4px}.footer small{color:#a9d1c3}
+.backtop{color:var(--gold);text-decoration:none;font-weight:800}
+.toast{position:fixed;bottom:22px;left:50%;transform:translateX(-50%) translateY(100px);background:#173b35;color:white;padding:12px 18px;border-radius:999px;box-shadow:var(--shadow);z-index:50;transition:transform .25s;font-weight:750}
+.toast.show{transform:translateX(-50%) translateY(0)}
+@media(max-width:850px){
+ .hero-inner{grid-template-columns:1fr;gap:18px;padding:52px 22px 74px}.hero-art{min-height:360px}.hero-orbit{width:320px;height:320px}.logo-card{max-width:290px}.bubble-top{right:0}.bubble-bottom{left:0}.quick-grid{grid-template-columns:repeat(2,1fr)}.quick:nth-child(2){border-right:0}.quick:nth-child(-n+2){border-bottom:1px solid var(--line)}
+ .foundation-grid{grid-template-columns:repeat(2,1fr)}.branch-grid{grid-template-columns:repeat(2,1fr)}.timeline{grid-template-columns:1fr}.promise{grid-template-columns:1fr}
+ .navlinks{display:none;position:absolute;left:12px;right:12px;top:74px;background:white;border:1px solid var(--line);border-radius:18px;padding:18px;box-shadow:var(--shadow);flex-direction:column;align-items:stretch}.navlinks.open{display:flex}.menu-btn{display:block}
+}
+@media(max-width:600px){
+ section{padding:62px 18px}.nav{padding:10px 16px}.brand img{width:39px;height:39px}.brand{font-size:.9rem}.hero-inner{padding:42px 18px 62px}.hero-art{min-height:310px}.hero-orbit{width:270px;height:270px}.logo-card{width:min(72%,250px);padding:13px;border-radius:27px}.float-bubble{padding:8px 10px;font-size:.8rem}.float-bubble .bubble-icon{width:29px;height:29px;font-size:1rem}.bubble-top{top:0;right:-2px}.bubble-bottom{bottom:0;left:-2px}.quickbar{padding:0 14px}.quick{padding:14px 12px;gap:9px}.quick-icon{width:34px;height:34px;font-size:1rem}.quick b{font-size:.85rem}.quick small{font-size:.7rem}
+ .prayer-grid{grid-template-columns:1fr}.prayer-card.featured{grid-column:auto}.prayer-card{padding:22px}.foundation-grid{grid-template-columns:1fr}.branch-grid{grid-template-columns:1fr 1fr}.promise{padding:25px}.promise blockquote{font-size:1.08rem}
+}
+@media print{
+ .topbar,.hero-actions,.quickbar,.prayer-tools,.card-actions,.footer,.toast{display:none!important}
+ body{background:white}.hero{background:white;color:#173b35}.hero-inner{display:block;padding:20px}.hero p{color:#35534d}.logo-card{display:none}
+ section{padding:20px 0;max-width:none}.prayer-card{break-inside:avoid;box-shadow:none}.prayer-grid{grid-template-columns:1fr 1fr}.prayer-card.featured{grid-column:1/-1}
+}
+</style>
+</head>
+<body>
+<header class="topbar" id="inicio">
+ <nav class="nav" aria-label="Navegación principal">
+  <a class="brand" href="#inicio"><img src="assets/logo-colegio.png" alt="Logo del Colegio Ecológico Scout"><span>Colegio Ecológico Scout<small>APRENDER · SERVIR · LIDERAR</small></span></a>
+  <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-label="Abrir menú">☰ Menú</button>
+  <div class="navlinks" id="navlinks">
+   <a href="#oraciones">Oraciones</a><a href="#fundamentos">Fundamentos</a><a href="#ramas">Ramas scout</a><a href="#promesa">Promesa scout</a>
+  </div>
+ </nav>
+</header>
+
+<main>
+<section class="hero" aria-labelledby="hero-title"><div class="hero-landscape" aria-hidden="true"></div>
+ <div class="hero-inner">
+  <div class="hero-copy">
+   <span class="eyebrow"><i></i> Colegio Ecológico Scout · 2026</span>
+   <span class="hero-label">Nuestra voz · Nuestros valores · Nuestra comunidad</span>
+   <h1 id="hero-title">Oraciones <span class="highlight">Scout</span></h1>
+   <p>Un lugar para encontrarnos, hacer una pausa y recordar lo que nos une: la fe, el servicio, la amistad y el compromiso de dejar el mundo un poco mejor.</p>
+   <div class="hero-actions"><a class="btn btn-gold" href="#oraciones">⚜️ Encontrar mi oración</a><a class="btn btn-light" href="#fundamentos">Conocer el espíritu scout <span aria-hidden="true">↘</span></a></div>
+   <div class="hero-note">Para compartir en formaciones, ceremonias y momentos de reflexión.</div>
+  </div>
+  <div class="hero-art">
+   <div class="hero-orbit" aria-hidden="true"></div>
+   <div class="logo-card"><img src="assets/logo-colegio.png" alt="Emblema oficial del Colegio Ecológico Scout"><p class="logo-caption">IDENTIDAD · SERVICIO · COMPROMISO</p></div>
+  </div>
+ </div>
+</section>
+
+<div class="quickbar">
+ <div class="quick-grid">
+  <a class="quick" href="#oraciones"><span class="quick-icon">🙏</span><span><b>Oraciones scout</b><small>Consulta y copia cada oración</small></span></a>
+  <a class="quick" href="#promesa"><span class="quick-icon">⚜️</span><span><b>Promesa Scout</b><small>El compromiso personal</small></span></a>
+  <a class="quick" href="#fundamentos"><span class="quick-icon">🌿</span><span><b>Escultismo</b><small>Propósito y metodología</small></span></a>
+  <a class="quick" href="#ramas"><span class="quick-icon">🧭</span><span><b>Ramas educativas</b><small>Aprender en cada etapa</small></span></a>
+ </div>
+</div>
+
+<section id="oraciones">
+ <div class="section-head">
+  <span class="kicker">Un momento para conectar</span>
+  <h2>Oraciones scout</h2>
+  <p></p>
+ </div>
+ <div class="prayer-tools">
+  <input class="search" id="prayerSearch" type="search" placeholder="Buscar una oración… (ej. Tropa, Rover)" aria-label="Buscar oraciones">
+  <button class="filter active" data-filter="todas">Todas</button><button class="filter" data-filter="manada">Manada y Cachorros</button><button class="filter" data-filter="tropa">Tropa</button><button class="filter" data-filter="caminantes">Caminantes</button><button class="filter" data-filter="rover">Rover</button><button class="filter" data-filter="dirigentes">Scouters</button>
+ </div>
+ <div class="prayer-grid" id="prayerGrid">
+  <article class="prayer-card featured" data-category="tropa">
+   <div class="card-top"><div><span class="prayer-tag">Rama scout</span><h3>Oración de Tropa</h3></div><span class="quick-icon">⚜️</span></div>
+   <p class="prayer-text">Señor Jesús,
+enséñame a ser generoso,
+a servirte como lo mereces,
+a dar sin medida,
+a combatir sin miedo a que me hieran,
+a trabajar sin descanso,
+y a no buscar más recompensa
+que el saber que hago tu santa voluntad.
+Así sea.</p>
+   <div class="card-actions"><button class="mini-btn copy-btn">Copiar oración</button><button class="mini-btn print-btn">Imprimir</button></div>
+  </article>
+  <article class="prayer-card" data-category="manada">
+   <div class="card-top"><div><span class="prayer-tag">Manada · Cachorros</span><h3>Oración de la Manada y Cachorros</h3></div><span class="quick-icon">🐾</span></div>
+   <p class="prayer-text">¡Oh! Dulce y buen Señor mío:
+enséñame a ser humilde y bondadoso,
+a imitar tu ejemplo,
+a amarte con todo mi corazón,
+y a seguir el camino,
+que me ha de llevar junto a ti.
+Así sea.</p>
+   <div class="card-actions"><button class="mini-btn copy-btn">Copiar oración</button><button class="mini-btn print-btn">Imprimir</button></div>
+  </article>
+  <article class="prayer-card" data-category="caminantes">
+   <div class="card-top"><div><span class="prayer-tag">Comunidad</span><h3>Oración de Caminantes</h3></div><span class="quick-icon">🥾</span></div>
+   <p class="prayer-text">Señor, guía y apoyo de mis pasos,
+gracias por el amanecer que ilumina mi sendero,
+por despertar en mí las fuerzas que me animan a avanzar por la vida.
+Enséñame a ver con tus ojos a mis hermanos
+para vivir y cumplir cada día mi Promesa Scout.</p>
+   <div class="card-actions"><button class="mini-btn copy-btn">Copiar oración</button><button class="mini-btn print-btn">Imprimir</button></div>
+  </article>
+  <article class="prayer-card" data-category="rover">
+   <div class="card-top"><div><span class="prayer-tag">Clan Rover</span><h3>Oración Rover</h3></div><span class="quick-icon">🔥</span></div>
+   <p class="prayer-text">Dame, Señor:
+un corazón vigilante, que ningún pensamiento vano me aleje de ti;
+un corazón noble, que ningún afecto indigno rebaje;
+un corazón recto, que ninguna maldad desvíe;
+un corazón fuerte, que ninguna pasión esclavice;
+y un corazón generoso, para servir.</p>
+   <div class="card-actions"><button class="mini-btn copy-btn">Copiar oración</button><button class="mini-btn print-btn">Imprimir</button></div>
+  </article>
+  <article class="prayer-card" data-category="dirigentes">
+   <div class="card-top"><div><span class="prayer-tag">Servicio y liderazgo</span><h3>Oración de Scouters</h3></div><span class="quick-icon">🌳</span></div>
+   <p class="prayer-text">Señor, tú que me diste el deber de dirigir,
+dame ahora alegría para trabajar,
+seguridad para disponer,
+humildad para servir.
+Y convierte en fortaleza mi debilidad,
+en madurez mi inexperiencia,
+en habilidad mi torpeza.
+Quiero, con tu ayuda generosa,
+realizar la misión que me has encomendado.
+¡Así sea!</p>
+   <div class="card-actions"><button class="mini-btn copy-btn">Copiar oración</button><button class="mini-btn print-btn">Imprimir</button></div>
+  </article>
+ </div>
+ <p class="empty" id="emptyState">No encontramos una oración con ese nombre. Prueba otra búsqueda.</p>
+</section>
+
+<div class="band" id="fundamentos">
+ <section>
+  <div class="section-head">
+   <span class="kicker">La base de nuestra práctica</span>
+   <h2>Fundamentos del escultismo</h2>
+   <p>El escultismo es un movimiento educativo no formal, voluntario y no político que promueve el desarrollo integral de niños y jóvenes y su compromiso con la comunidad.</p>
+  </div>
+  <div class="foundation-grid">
+   <article class="info-card"><span class="symbol">🌱</span><h3>Desarrollo integral</h3><p>Promueve el crecimiento físico, intelectual, del carácter, social y espiritual, con respeto, honradez, lealtad e inclusión.</p></article>
+   <article class="info-card"><span class="symbol">🧭</span><h3>Aprender haciendo</h3><p>La experiencia, los retos prácticos y la vida al aire libre ayudan a desarrollar autonomía, habilidades y confianza.</p></article>
+   <article class="info-card"><span class="symbol">🤝</span><h3>Aprender sirviendo</h3><p>El servicio a los demás y a la comunidad convierte los valores en acciones concretas y cotidianas.</p></article>
+   <article class="info-card"><span class="symbol">🎲</span><h3>Aprender jugando</h3><p>El juego y la aventura son medios para explorar, convivir, aprender y construir experiencias significativas.</p></article>
+   <article class="info-card"><span class="symbol">👥</span><h3>Vida en pequeños grupos</h3><p>Seisenas, patrullas y equipos permiten asumir responsabilidades, tomar decisiones y trabajar en colaboración.</p></article>
+   <article class="info-card"><span class="symbol">🌎</span><h3>Ciudadanía activa</h3><p>Forma ciudadanos comprometidos, capaces de servir a su comunidad y contribuir a la construcción de un mundo mejor.</p></article>
+  </div>
+  <div class="timeline">
+   <article><strong>1907 · Primer campamento</strong><p>En 1907 se realizó el primer campamento scout experimental en la isla de Brownsea, Inglaterra, con la participación de 20 jóvenes organizados en cuatro patrullas.</p></article>
+   <article><strong>1908 · Un método compartido</strong><p>En 1908, Robert Baden-Powell publicó <em>Escultismo para muchachos</em>, obra que contribuyó a difundir el método scout.</p></article>
+   <article><strong>1995 · Origen del colegio</strong><p>El Colegio Ecológico Scout fue fundado en 1995 por jefes scout vinculados al magisterio y comprometidos con el servicio a la comunidad.</p></article>
+  </div>
+ </section>
+</div>
+
+<section id="ramas">
+ <div class="section-head">
+  <span class="kicker">Progresión personal</span>
+  <h2>Una ruta para cada etapa</h2>
+  <p>Las secciones educativas del Colegio Ecológico Scout se organizan por etapas y metodologías que acompañan el crecimiento del estudiante.</p>
+ </div>
+ <div class="branch-grid">
+  <article class="branch"><span>🐾</span><h3>Manada</h3><p>Juego, fantasía, imitación y aprendizaje en comunidad. En el colegio, la etapa inicial se conecta con Cachorros y las manadas de primaria descritas en el material.</p></article>
+  <article class="branch"><span>⚜️</span><h3>Tropa</h3><p>Grados 6.º, 7.º y 8.º. Método: <b>aprender haciendo</b>. Aventura, campismo, técnicas y trabajo en patrullas. Lema: “Siempre Listo”.</p></article>
+  <article class="branch"><span>🥾</span><h3>Caminantes</h3><p>Grado 9.º. Método: <b>aprender explorando</b>. Senderismo, excursiones, orientación vocacional y equipos de trabajo. Lema: “Siempre Adelante”.</p></article>
+  <article class="branch"><span>🔥</span><h3>Clan Rover</h3><p>Grados 10.º y 11.º. Método: <b>aprender sirviendo</b>. Proyectos de servicio, autonomía, liderazgo y compromiso social.</p></article>
+ </div>
+</section>
+
+<section id="promesa">
+ <div class="section-head">
+  <span class="kicker">Un compromiso voluntario</span>
+  <h2>Promesa Scout</h2>
+  <p>La Promesa Scout expresa el compromiso personal de cumplir los deberes, ayudar al prójimo y vivir fielmente la Ley Scout.</p>
+ </div>
+ <div class="promise">
+  <div><h3>Una promesa para vivirla cada día.</h3><p>La investidura representa una decisión consciente de vivir los valores scouts, crecer personalmente y ponerse al servicio de los demás.</p></div>
+  <blockquote>“Yo, _______________, por mi honor y con la gracia de Dios, prometo hacer cuanto de mí dependa para: cumplir mis deberes con Dios y la patria, ayudar al prójimo en toda circunstancia, y vivir fielmente la Ley Scout.”</blockquote>
+ </div>
+</section>
+
+<section id="investidura">
+ <div class="section-head"><span class="kicker">Compromiso y crecimiento</span><h2>La investidura: un paso consciente</h2><p>La investidura es una ceremonia de reconocimiento y compromiso, acorde con el proceso de crecimiento y la etapa de progresión de cada scout.</p></div>
+ <div class="foundation-grid">
+  <article class="info-card"><span class="symbol">💭</span><h3>Preparación y reflexión</h3><p>Reconocer el propio proceso, la disposición para servir y el significado de la Ley Scout en la vida diaria.</p></article>
+  <article class="info-card"><span class="symbol">🗣️</span><h3>La Promesa</h3><p>Expresar voluntariamente el compromiso ante compañeros, scouters y el movimiento.</p></article>
+  <article class="info-card"><span class="symbol">🎗️</span><h3>Imposición de símbolos</h3><p>La pañoleta y las insignias de progresión representan externamente la identidad y el compromiso asumido.</p></article>
+ </div>
+</section>
+
+<section id="reme">
+ <div class="section-head"><span class="kicker">Planear para educar</span><h2>La ficha REME</h2><p>La Red de Elaboración de Material Educativo es presentada como una herramienta para planear, registrar y replicar actividades educativas scout.</p></div>
+ <div class="foundation-grid">
+  <article class="info-card"><span class="symbol">🗓️</span><h3>Cronograma</h3><p>Organiza el orden y el tiempo previsto para realizar la actividad.</p></article>
+  <article class="info-card"><span class="symbol">🌿</span><h3>Áreas de crecimiento</h3><p>Relaciona la experiencia con las dimensiones de desarrollo que se desean fortalecer.</p></article>
+  <article class="info-card"><span class="symbol">🧑‍🤝‍🧑</span><h3>Equipo scouter</h3><p>Ayuda a coordinar responsabilidades y a mantener una experiencia educativa organizada.</p></article>
+ </div>
+</section>
+</main>
+
+<footer class="footer">
+ <div class="footer-inner">
+  <div class="footer-brand"><img src="assets/logo-colegio.png" alt=""><div><b>Colegio Ecológico Scout</b><br><small>Aprender · Servir · Liderar · Transformar</small></div></div>
+  <small>Recurso digital de consulta para la comunidad educativa scout.</small>
+  <a class="backtop" href="#inicio">Volver arriba ↑</a>
+ </div>
+</footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script>
+const menuBtn=document.getElementById('menuBtn');
+const navlinks=document.getElementById('navlinks');
+menuBtn.addEventListener('click',()=>{const open=navlinks.classList.toggle('open');menuBtn.setAttribute('aria-expanded',open?'true':'false')});
+navlinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{navlinks.classList.remove('open');menuBtn.setAttribute('aria-expanded','false')}));
+const search=document.getElementById('prayerSearch');
+const cards=[...document.querySelectorAll('.prayer-card')];
+const filters=[...document.querySelectorAll('.filter')];
+let currentFilter='todas';
+function filterCards(){const term=search.value.toLocaleLowerCase('es').trim();let shown=0;cards.forEach(card=>{const matchesFilter=currentFilter==='todas'||card.dataset.category===currentFilter;const matchesText=card.innerText.toLocaleLowerCase('es').includes(term);const visible=matchesFilter&&matchesText;card.style.display=visible?'flex':'none';if(visible)shown++});document.getElementById('emptyState').style.display=shown?'none':'block'}
+search.addEventListener('input',filterCards);
+filters.forEach(btn=>btn.addEventListener('click',()=>{filters.forEach(b=>b.classList.remove('active'));btn.classList.add('active');currentFilter=btn.dataset.filter;filterCards()}));
+const toast=document.getElementById('toast');let toastTimer;
+function showToast(msg){toast.textContent=msg;toast.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>toast.classList.remove('show'),2200)}
+document.querySelectorAll('.copy-btn').forEach(btn=>btn.addEventListener('click',async()=>{const card=btn.closest('.prayer-card');const title=card.querySelector('h3').innerText;const text=card.querySelector('.prayer-text').innerText;try{await navigator.clipboard.writeText(title+'\n\n'+text);showToast('Oración copiada al portapapeles')}catch(e){const area=document.createElement('textarea');area.value=title+'\n\n'+text;document.body.appendChild(area);area.select();document.execCommand('copy');area.remove();showToast('Oración copiada')}}));
+document.querySelectorAll('.print-btn').forEach(btn=>btn.addEventListener('click',()=>{const card=btn.closest('.prayer-card');const w=window.open('','_blank','width=700,height=800');if(!w){showToast('Permite las ventanas emergentes para imprimir');return}w.document.write('<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><title>'+card.querySelector('h3').innerText+'</title><style>body{font-family:Georgia,serif;max-width:650px;margin:60px auto;padding:0 25px;color:#18312e}h1{font-family:Arial,sans-serif;color:#075b53}p{font-size:20px;line-height:1.9;white-space:pre-line}</style></head><body><h1>'+card.querySelector('h3').innerText+'</h1><p>'+card.querySelector('.prayer-text').innerText+'</p></body></html>');w.document.close();w.focus();w.print()}));
+</script>
+</body>
+</html>
